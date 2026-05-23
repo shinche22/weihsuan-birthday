@@ -8,18 +8,19 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
 
 <style>
-/* ====== 基本畫面 ====== */
+
+/* ===== 基礎字體修正（只修這個問題）===== */
 body{
   margin:0;
   background:#111827;
-  font-family:'Press Start 2P', cursive;
+  font-family:'DotGothic16','Press Start 2P',cursive;
   color:white;
 }
 
-/* ====== 中央開場 ====== */
+/* ===== 開場畫面 ===== */
 .center{
   height:100vh;
   display:flex;
@@ -29,9 +30,9 @@ body{
   text-align:center;
 }
 
-/* ====== 打字效果 ====== */
+/* ===== 打字效果 ===== */
 .typewriter{
-  font-size:14px;
+  font-size:16px;
   white-space:nowrap;
   overflow:hidden;
   border-right:3px solid white;
@@ -48,11 +49,11 @@ body{
   50%{ border-color:transparent }
 }
 
-/* ====== 按鈕 ====== */
+/* ===== 按鈕 ===== */
 button{
   margin-top:30px;
   padding:10px 18px;
-  font-family:'Press Start 2P', cursive;
+  font-family:'DotGothic16','Press Start 2P',cursive;
   background:#ff77c8;
   border:none;
   color:white;
@@ -60,7 +61,7 @@ button{
   display:none;
 }
 
-/* ====== 對話框 ====== */
+/* ===== 對話框 ===== */
 .message-box{
   display:none;
   max-width:850px;
@@ -69,14 +70,14 @@ button{
   border:5px solid #ff77c8;
   padding:25px;
   line-height:2;
-  font-size:14px;
+  font-size:16px;
   border-radius:16px;
 }
 
-/* ====== 消失用 ====== */
 .hidden{
   display:none !important;
 }
+
 </style>
 
 </head>
@@ -112,21 +113,23 @@ button{
 </div>
 
 <script>
+
 const text = document.getElementById("text");
 const btn = document.getElementById("btn");
 const intro = document.getElementById("intro");
 const msg = document.getElementById("msg");
 
-/* 打字結束後出現按鈕 */
+/* 打字完顯示按鈕 */
 setTimeout(()=>{
   btn.style.display="inline-block";
 },3200);
 
 /* 點擊後切換畫面 */
 btn.addEventListener("click",()=>{
-  intro.classList.add("hidden");  // 讓開場完全消失
-  msg.style.display="block";      // 顯示對話框
+  intro.style.display="none";
+  msg.style.display="block";
 });
+
 </script>
 
 </body>
