@@ -4,37 +4,121 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Message</title>
+<title>Cherry Message</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+<style>
+.typewriter {
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  width: 0;
+  animation: typing 3s steps(30) forwards, blink 0.6s infinite;
+  margin: 40px auto;
+  text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.center {
+  text-align: center;
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-family: inherit;
+  background: #ff77c8;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.message-box {
+  display: none;
+  max-width: 800px;
+  margin: 30px auto;
+  background: #1f2937;
+  border: 5px solid #ff77c8;
+  padding: 25px;
+  line-height: 2;
+  font-size: 18px;
+  border-radius: 20px;
+  color: white;
+}
+</style>
 
 </head>
 
 <body class="message-page">
 
-<div class="message-container">
+<div class="center">
 
-<h1 class="message-title">
+<div id="type" class="typewriter">
 WHAT I WANT TO SAY IS...
-</h1>
+</div>
 
-<div class="message-box">
-
-<p>我有沒有進步了！！！活到2026年我總算開始善用ai了，要流淚了，這些指令我寫好久，看起來還有更細的指令可以下欸，怎麼覺得好像開始有點覺得ai很好玩+方便了（什麼老人發言）</p>
-
-<p>人妻生活有沒有什麼改變呀？我們超久不見了沒想到再見居然是婚禮，什麼可怕的發展，我2025最尷尬時刻絕對有你參與其中🤣，但還是非常開心能看到您本人嗚嗚嗚！</p>
-
-<p>人過了30歲會漸漸發現每一天怎麼都長一樣，也沒有什麼特別期待/或覺得好玩的事情（超老發言）希望新婚能替你生活帶來一點火花（有嗎？以及蜜月假記得去美麗地方玩。</p>
-
-<p>總之！30歲的新身分相信感悟多多，祝福你每天都很輕鬆愉快不加班！</p>
-
-<p>生日快樂！！身體健康！天天都開心！</p>
+<button id="btn">
+CLICK TO CONTINUE
+</button>
 
 </div>
 
+<div id="msg" class="message-box">
+
+<p>
+我有沒有進步了！！！活到2026年我總算開始善用ai了，要流淚了，這些指令我寫好久，看起來還有更細的指令可以下欸，怎麼覺得好像開始有點覺得ai很好玩+方便了（什麼老人發言）
+</p>
+
+<p>
+人妻生活有沒有什麼改變呀？我們超久不見了沒想到再見居然是婚禮，什麼可怕的發展，我2025最尷尬時刻絕對有你參與其中🤣，但還是非常開心能看到您本人嗚嗚嗚！
+</p>
+
+<p>
+人過了30歲會漸漸發現每一天怎麼都長一樣，也沒有什麼特別期待/或覺得好玩的事情（超老發言）希望新婚能替你生活帶來一點火花
+</p>
+
+<p>
+總之！30歲的新身分相信感悟多多，生活在30+階段也會越來越常碰觸到一些現實面的東西，祝福你都能輕鬆面對！
+</p>
+
+<p>
+仔細想想我們這麼少見面這賀卡大賽還能持續這麼久真的很搞笑，但特別的緣份我會永遠珍惜下去ㄉ！
+</p>
+
+<p>
+總之！生日快樂！！身體健康！天天都開心！
+</p>
+
 </div>
+
+<script>
+const type = document.getElementById("type");
+const btn = document.getElementById("btn");
+const msg = document.getElementById("msg");
+
+// 等打字動畫結束後顯示按鈕
+setTimeout(() => {
+  btn.style.display = "inline-block";
+}, 3200);
+
+// 點按鈕顯示內容
+btn.addEventListener("click", () => {
+  msg.style.display = "block";
+  btn.style.display = "none";
+});
+</script>
 
 </body>
 </html>
