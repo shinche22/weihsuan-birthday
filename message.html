@@ -7,116 +7,125 @@
 <title>Cherry Message</title>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap" rel="stylesheet">
 
 <style>
-.typewriter {
-  font-size: 18px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid white;
-  width: 0;
-  animation: typing 3s steps(30) forwards, blink 0.6s infinite;
-  margin: 40px auto;
-  text-align: center;
+/* ====== 基本畫面 ====== */
+body{
+  margin:0;
+  background:#111827;
+  font-family:'Press Start 2P', cursive;
+  color:white;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+/* ====== 中央開場 ====== */
+.center{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
-@keyframes blink {
-  50% { border-color: transparent }
+/* ====== 打字效果 ====== */
+.typewriter{
+  font-size:14px;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:3px solid white;
+  width:0;
+  animation:typing 3s steps(25) forwards, blink 0.6s infinite;
 }
 
-.center {
-  text-align: center;
+@keyframes typing{
+  from{ width:0 }
+  to{ width:100% }
 }
 
-button {
-  margin-top: 30px;
-  padding: 10px 20px;
-  font-family: inherit;
-  background: #ff77c8;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: none;
+@keyframes blink{
+  50%{ border-color:transparent }
 }
 
-.message-box {
-  display: none;
-  max-width: 800px;
-  margin: 30px auto;
-  background: #1f2937;
-  border: 5px solid #ff77c8;
-  padding: 25px;
-  line-height: 2;
-  font-size: 18px;
-  border-radius: 20px;
-  color: white;
+/* ====== 按鈕 ====== */
+button{
+  margin-top:30px;
+  padding:10px 18px;
+  font-family:'Press Start 2P', cursive;
+  background:#ff77c8;
+  border:none;
+  color:white;
+  cursor:pointer;
+  display:none;
+}
+
+/* ====== 對話框 ====== */
+.message-box{
+  display:none;
+  max-width:850px;
+  margin:60px auto;
+  background:#1f2937;
+  border:5px solid #ff77c8;
+  padding:25px;
+  line-height:2;
+  font-size:14px;
+  border-radius:16px;
+}
+
+/* ====== 消失用 ====== */
+.hidden{
+  display:none !important;
 }
 </style>
 
 </head>
 
-<body class="message-page">
+<body>
 
-<div class="center">
+<!-- ===== 開場 ===== -->
+<div id="intro" class="center">
 
-<div id="type" class="typewriter">
-WHAT I WANT TO SAY IS...
+  <div id="text" class="typewriter">
+    WHAT I WANT TO SAY IS...
+  </div>
+
+  <button id="btn">CLICK TO CONTINUE</button>
+
 </div>
 
-<button id="btn">
-CLICK TO CONTINUE
-</button>
-
-</div>
-
+<!-- ===== 對話框 ===== -->
 <div id="msg" class="message-box">
 
-<p>
-我有沒有進步了！！！活到2026年我總算開始善用ai了，要流淚了，這些指令我寫好久，看起來還有更細的指令可以下欸，怎麼覺得好像開始有點覺得ai很好玩+方便了（什麼老人發言）
-</p>
+<p>我有沒有進步了！！！活到2026年我總算開始善用ai了，要流淚了，這些指令我寫好久，看起來還有更細的指令可以下欸，怎麼覺得好像開始有點覺得ai很好玩+方便了（什麼老人發言）</p>
 
-<p>
-人妻生活有沒有什麼改變呀？我們超久不見了沒想到再見居然是婚禮，什麼可怕的發展，我2025最尷尬時刻絕對有你參與其中🤣，但還是非常開心能看到您本人嗚嗚嗚！
-</p>
+<p>人妻生活有沒有什麼改變呀？我們超久不見了沒想到再見居然是婚禮，什麼可怕的發展，我2025最尷尬時刻絕對有你參與其中XD，但還是非常開心能看到您本人嗚嗚嗚！</p>
 
-<p>
-人過了30歲會漸漸發現每一天怎麼都長一樣，也沒有什麼特別期待/或覺得好玩的事情（超老發言）希望新婚能替你生活帶來一點火花
-</p>
+<p>人過了30歲會漸漸發現每一天怎麼都長一樣，也沒有什麼特別期待/或覺得好玩的事情（超老發言）希望新婚能替你生活帶來一點火花（有嗎？以及蜜月假記得去美麗地方玩，期待看美照（但30歲之後根本不怎麼更新ig了⋯XDDDD</p>
 
-<p>
-總之！30歲的新身分相信感悟多多，生活在30+階段也會越來越常碰觸到一些現實面的東西，祝福你都能輕鬆面對！
-</p>
+<p>總之！30歲的新身分相信感悟多多，生活在30+階段也會越來越常碰觸到一些現實面的東西，祝福你都能輕鬆面對，每天都活得很輕鬆愉快不加班！</p>
 
-<p>
-仔細想想我們這麼少見面這賀卡大賽還能持續這麼久真的很搞笑，但特別的緣份我會永遠珍惜下去ㄉ！
-</p>
+<p>仔細想想我們這麼少見面這賀卡大賽還能持續這麼久真的很搞笑，但特別的緣份我會永遠珍惜下去ㄉ！（每次要做你賀卡就覺得媽呀一年又過一半了）</p>
 
-<p>
-總之！生日快樂！！身體健康！天天都開心！
-</p>
+<p>總之！生日快樂！！身體健康！天天都開心！</p>
 
 </div>
 
 <script>
-const type = document.getElementById("type");
+const text = document.getElementById("text");
 const btn = document.getElementById("btn");
+const intro = document.getElementById("intro");
 const msg = document.getElementById("msg");
 
-// 等打字動畫結束後顯示按鈕
-setTimeout(() => {
-  btn.style.display = "inline-block";
-}, 3200);
+/* 打字結束後出現按鈕 */
+setTimeout(()=>{
+  btn.style.display="inline-block";
+},3200);
 
-// 點按鈕顯示內容
-btn.addEventListener("click", () => {
-  msg.style.display = "block";
-  btn.style.display = "none";
+/* 點擊後切換畫面 */
+btn.addEventListener("click",()=>{
+  intro.classList.add("hidden");  // 讓開場完全消失
+  msg.style.display="block";      // 顯示對話框
 });
 </script>
 
